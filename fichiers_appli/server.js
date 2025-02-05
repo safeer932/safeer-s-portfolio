@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const nodemailer = require("nodemailer"); // Importer Nodemailer
 const app = express();
-const PORT = 80;
+const PORT = 8000;
 
 // Middleware pour analyser les données du formulaire
 app.use(bodyParser.urlencoded({ extended: true }));

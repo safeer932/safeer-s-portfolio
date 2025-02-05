@@ -1,14 +1,14 @@
 function handleFormSubmit(event) {
-    event.preventDefault(); // Empêche le rechargement de la page par défaut
+    event.preventDefault(); // cette ligne empêche le rechargement de la page par défaut
 
     const form = document.getElementById("contact-form");
     const notification = document.getElementById("notification");
 
-    // Récupérer les données du formulaire
+    // pour récupérer les données du formulaire
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    // Envoyer les données au serveur
+    // cette partie est pour envoyer les données au serveur
     fetch("/submit-form", {
         method: "POST",
         headers: {
@@ -18,7 +18,7 @@ function handleFormSubmit(event) {
     })
         .then((response) => response.json())
         .then((result) => {
-            // Afficher une notification
+            // cette partie permet d'afficher une notification
             notification.textContent = result.message || "Message envoyé avec succès !";
             notification.classList.remove("hidden");
             notification.classList.add("visible");

@@ -1,6 +1,6 @@
 FROM node:16
 
-# Synchroniser la date/heure dans le conteneur
+# cette commande nest pas obligatoire dans le dockerfile mais cela permet de synchroniser la date/heure dans le conteneur
 RUN apt-get update && apt-get install -y tzdata && \
     ln -fs /usr/share/zoneinfo/Europe/Paris /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
 
