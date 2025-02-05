@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-game
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-game
+  template:
+    metadata:
+      labels:
+        app: my-game
+    spec:
+      containers:
+        - name: game
+          image: safeer932/game:latest
+          ports:
+            - containerPort: 80
