@@ -1,18 +1,18 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: my-game-ingress
+  name: my-portfolio-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: labyrinth-challenge.com
+  - host: safeerahmad.com
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: my-game
+            name: my-portfolio
             port:
               number: 80
