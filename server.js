@@ -20,7 +20,7 @@ const transporter = nodemailer.createTransport({
   service: "gmail", // Utilise Gmail pour l'envoi d'e-mails
   auth: {
     user: process.env.EMAIL_USER, //adresse Gmail
-    pass: porcess.env.EMAIL_PASS, // Ton mot de passe ou ton "App Password" Gmail
+    pass: process.env.EMAIL_PASS, // Ton mot de passe ou ton "App Password" Gmail
   },
 });
 
