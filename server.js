@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const nodemailer = require("nodemailer"); // Importer Nodemailer
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 // Middleware pour analyser les données du formulaire
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -19,8 +19,8 @@ app.use("/cv", express.static(path.join(__dirname, "cv")));
 const transporter = nodemailer.createTransport({
   service: "gmail", // Utilise Gmail pour l'envoi d'e-mails
   auth: {
-    user: "ahsaf561@gmail.com", // Ton adresse Gmail
-    pass: "moxn vzbn vola yups", // Ton mot de passe ou ton "App Password" Gmail
+    user: process.env.EMAIL_USER, //adresse Gmail
+    pass: porcess.env.EMAIL_PASS, // Ton mot de passe ou ton "App Password" Gmail
   },
 });
 
