@@ -6,7 +6,7 @@
       "use": "@vercel/node"
     },
     {
-      "src": "public/index.html",
+      "src": "public/*",
       "use": "@vercel/static"
     }
   ],
@@ -19,6 +19,9 @@
       "src": "/(.*)",
       "dest": "/public/index.html"
     }
-  ]
+  ],
+  "env": {
+    "EMAIL_USER": "@email_user",
+    "EMAIL_PASS": "@email_pass"
+  }
 }
-
