@@ -19,10 +19,7 @@
       "src": "/(.*)",
       "dest": "/public/index.html"
     }
-  ],
-  "env": {
-    "EMAIL_USER": "@email_user",
-    "EMAIL_PASS": "@email_pass"
-  }
+  ]
 }
+
 
