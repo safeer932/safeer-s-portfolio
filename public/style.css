@@ -1,0 +1,882 @@
+body, ul, li, h1, p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Couleur principale */
+    color: white;
+    text-align: center;
+}
+
+
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #000000;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 60px;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.navbar-menu li a:hover {
+    color: #797979; /* Couleur d'accentuation */
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 80px 20px 50px; /* Plus d'espace pour les icônes sociales */
+    background: url('/images/background.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile-photo {
+    width: 150px; /* Taille uniforme */
+    height: 150px; /* Taille uniforme */
+    border-radius: 50%; /* Rendre la photo ronde */
+    object-fit: cover; /* Ajuster l’image pour qu’elle soit bien cadrée */
+    border: 3px solid white; /* Ajouter une bordure pour bien distinguer la photo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajout d’une ombre pour la rendre plus visible */
+    margin: 0 auto 20px; /* Centrer l'image et ajouter un espacement en bas */
+    display: block; /* S'assurer qu'elle est bien affichée en block */
+}
+
+/* Ajustements pour mobile */
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Empile les colonnes */
+        text-align: center;
+    }
+
+    .about-left, .about-right {
+        flex: none;
+        width: 100%; /* Chaque section prend toute la largeur */
+    }
+
+    .about-right h3 {
+        margin-top: 20px; /* Espacement entre les sections */
+    }
+
+    .about-list li {
+        font-size: 14px; /* Réduction de la taille du texte */
+    }
+}
+
+/* Pour les très petits écrans (moins de 480px) */
+@media screen and (max-width: 480px) {
+    .about-left h2 {
+        font-size: 22px;
+    }
+
+    .about-left p, .about-list li {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .about-right h3 {
+        font-size: 20px;
+    }
+
+    .info-list {
+        font-size: 14px;
+    }
+}
+
+
+/* Buttons */
+.hero-buttons {
+    margin-bottom: 40px;
+}
+
+.btn {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-hire {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.btn-hire:hover {
+    background-color: #969696;
+    transform: scale(1.1);
+}
+
+.btn-download {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 20px;
+}
+
+.btn-download:hover {
+    background-color: #cccccc;
+    transform: scale(1.1);
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 20px; /* Ajuster l'espacement par rapport aux autres éléments */
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Réduire l'espace entre les icônes */
+}
+
+.social-icon {
+    display: inline-block;
+    width: 50px; /* Réduire la taille des icônes */
+    height: 50px; /* Réduire la taille des icônes */
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s, box-shadow 0.1s;
+    position: relative; /* Permet d'ajuster les icônes */
+    top: 75px; /* Déplacer légèrement vers le bas */
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon img {
+    width: 24px; /* Taille plus petite des images */
+    height: 24px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-section {
+        padding: 50px 10px;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+        margin: 5px;
+    }
+
+    .social-links {
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icon img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Espacement et alignement des icônes sociales */
+.social-links {
+    margin-top: 40px; /* Augmente l'espace entre la Hero Section et les icônes */
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Ajoute plus d'espace entre les icônes */
+}
+
+/* Texte "Safeer's Portfolio" */
+.navbar-brand {
+    font-size: 24px; /* Augmentation de la taille du texte */
+    font-weight: bold;
+    color: white;
+    text-align: center; /* Centre le texte */
+}
+
+
+
+/* About Section */
+.about-section {
+    padding: 60px 20px; /* Espacement autour de la section */
+    background-color: #f8f9fa; /* Couleur de fond douce */
+    color: #333;
+}
+
+.about-container {
+    max-width: 1200px; /* Limite la largeur de la section */
+    margin: 0 auto; /* Centre la section */
+}
+
+/* Conteneur global avec ombre */
+.about-shadow {
+    background-color: #ffffff; /* Fond blanc */
+    padding: 40px; /* Espacement intérieur */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    font-size: 30px;
+}
+
+/* About Content */
+.about-content {
+    display: flex; /* Affiche en flexbox pour les deux colonnes */
+    justify-content: space-between; /* Espace égal entre les colonnes */
+    align-items: flex-start; /* Aligne les colonnes en haut */
+    gap: 20px; /* Ajoute un espace entre les colonnes */
+}
+
+.about-left, .about-right {
+    flex: 1; /* Chaque colonne occupe une largeur égale */
+}
+
+/* About Left: Texte et liste "About Me" */
+.about-left h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000000; /* Couleur du titre */
+    text-align: left; /* Alignement à gauche */
+}
+
+.about-left p {
+    font-size: 16px;
+    line-height: 1.6; /* Espacement entre les lignes */
+    margin-bottom: 30px;
+    text-align: left; /* Alignement à gauche */
+}
+
+.about-list {
+    list-style: none; /* Supprime les puces par défaut */
+    padding: 0;
+    margin: 0;
+}
+
+.about-list li {
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: flex; /* Aligne les icônes et le texte sur une ligne */
+    align-items: center; /* Aligne verticalement les éléments */
+}
+
+.about-list li::before {
+    content: "✔️"; /* Icône par défaut */
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+    color: #00cc99; /* Couleur de l'icône */
+    font-size: 18px;
+    display: inline-block;
+    width: 24px; /* Taille fixe de l'icône */
+    text-align: center;
+}
+
+/* About Right: Informations de base */
+.about-right h3 {
+    font-size: 25px;
+    color: #000000; /* Couleur du titre */
+    margin-bottom: 20px;
+}
+
+.info-list {
+    list-style: none; /* Supprime les puces par défaut */
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+.info-list li {
+    margin-bottom: 10px; /* Espacement entre les lignes */
+}
+
+.info-list strong {
+    color: #333; /* Couleur du texte important */
+}
+
+
+
+
+
+
+
+
+
+/* Projects Section */
+.projects-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-container h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #000000;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.btn-project {
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-project:hover {
+    background-color: #5a5a5a;
+}
+
+
+.work-in-progress {
+    font-weight: bold;
+    color: #d9534f; /* Rouge pour attirer l'attention */
+    font-size: 14px;
+}
+
+
+
+/* Skills Section */
+.skills-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.skills-container {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #000000;
+}
+
+.skills-container h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    gap: 20px; /* Ajoute un espacement entre les lignes et colonnes */
+    list-style-type: none; /* Supprime les puces par défaut */
+    padding-left: 130px; /* Enlève le décalage des listes */
+    margin: 0 auto; /* Centre la grille */
+    text-align: left; /* Aligne le texte à gauche dans chaque colonne */
+}
+
+.skills-grid li {
+    position: relative;
+    font-size: 16px;
+    padding-left: 20px; /* Décale le texte pour insérer le point */
+    line-height: 1.5; /* Espacement vertical pour centrer mieux */
+}
+
+/* Ajoute les points avant chaque skill */
+.skills-grid li::before {
+    content: "•"; /* Symbole pour les points */
+    position: absolute;
+    left: 0; /* Place le point à gauche */
+    color: #000000; /* Couleur du point */
+    font-size: 20px; /* Taille du point */
+}
+
+
+
+
+
+
+/* Education Section */
+.education-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.education-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.education-container h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+.education-list {
+    list-style: none; /* Supprime les puces par défaut */
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Aligne le texte à gauche */
+}
+
+.education-list li {
+    margin-bottom: 20px; /* Espacement entre les diplômes */
+    padding-left: 20px; /* Décale le texte pour insérer une icône */
+    position: relative;
+}
+
+.education-list h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.education-list p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.education-list span {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Ajoute une icône ou un point avant chaque diplôme */
+.education-list li::before {
+    content: "🎓"; /* Icône pour représenter l'éducation */
+    position: absolute;
+    left: -20px;
+    font-size: 18px;
+    color: #26b1db;
+}
+
+
+
+
+
+
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    color: #333;
+
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+.contact-container h2 {
+    font-size: 30;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.contact-container p {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+/* 📱 Ajustements pour tablettes et mobiles */
+@media screen and (max-width: 768px) {
+    .contact-container p {
+        font-size: 18px; /* Réduction du texte sur tablettes */
+        line-height: 1.5; /* Améliore la lisibilité */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-container p {
+        font-size: 16px; /* Encore plus petit pour les petits écrans */
+        line-height: 1.4;
+        margin-bottom: 20px; /* Réduction de l'espace entre les paragraphes */
+    }
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #969696;
+    outline: none;
+}
+
+.btn-submit {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #777777;
+}
+
+
+
+
+
+
+/* Responsiveness */
+
+/* Pour les écrans de taille moyenne (tablettes, 768px et moins) */
+@media screen and (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 50px 20px;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .role {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    /* Social Links */
+    .social-links {
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        grid-template-columns: 1fr; /* Une seule colonne */
+        gap: 15px;
+    }
+
+    /* Education Section */
+    .education-list {
+        text-align: center; /* Texte centré */
+    }
+
+    /* Contact Section */
+    .contact-container {
+        padding: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .btn-submit {
+        font-size: 14px;
+    }
+}
+
+/* Pour les petits écrans (mobiles, 480px et moins) */
+@media screen and (max-width: 480px) {
+    /* Navbar */
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar-brand {
+        font-size: 18px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 30px 10px;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hero-content h1 {
+        font-size: 20px;
+    }
+
+    .role {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        gap: 10px;
+    }
+
+    /* Education Section */
+    .education-list li {
+        font-size: 14px;
+    }
+
+    /* Contact Section */
+    .contact-container h2 {
+        font-size: 20px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 12px;
+    }
+
+    .btn-submit {
+        padding: 10px 15px;
+    }
+}
+
+
+
+
+
+/* Notification */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00cc99;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.notification.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.notification.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+
+
+
+/* Footer */
+.footer {
+    background-color: #000000; /* Couleur de fond sombre */
+    color: #fff; /* Couleur du texte */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px; /* Espacement avec la section précédente */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-social-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacement entre les icônes */
+}
+
+.footer-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff; /* Fond blanc pour les icônes */
+    border-radius: 50%; /* Rendre les icônes circulaires */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.footer-icon img {
+    width: 20px; /* Taille des icônes */
+    height: 20px;
+    object-fit: cover;
+}
+
+.footer-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
